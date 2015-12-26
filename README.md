@@ -1,4 +1,4 @@
 # Creact
-## Starter repo for the [creact tutorial](github.com/applegrain/creact)
+## Starter repo for the [creact tutorial](http://github.com/applegrain/creact)
 
-PR's accepted!! 
+PR's accepted (ツ)
