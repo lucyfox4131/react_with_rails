@@ -1,9 +1,23 @@
 var Body = React.createClass({
+  getInitialState() {
+    return { skills: [] }
+  },
+
+  componentDidMount() {
+    console.log('Hello');
+    $.getJSON('/api/v1/skills.json', (response) => { this.setState({ skills: response }) });
+  },
+
+  handleSubmit(skill) {
+    var newState = this.state.skills.concat(skill);
+    this.setState({ skills: newState })
+  },
+
   render() {
     return (
       <div>
-        < NewSkill />
-        < AllSkills />
+        < NewSkill handleSubmit={this.handleSubmit} />
+        < AllSkills skills={this.state.skills} />
       </div>
     )
   }
